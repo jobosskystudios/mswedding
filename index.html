@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mahati &amp; Sankar | Live Wedding Stream</title>
+<meta name="description" content="Watch the Reception (24 Oct, 7 PM) and Muhurtham (25 Oct, 9:00 AM) of Mahati &amp; Sankar live from Sree Varaaham Hall, Koyambedu, Chennai.">
+<meta property="og:title" content="Mahati ❤️ Sankar | Watch the Wedding Live">
+<meta property="og:description" content="Reception: Sat 24 Oct, 7 PM · Muhurtham: Sun 25 Oct, 9:00–10:30 AM (IST)">
+<meta property="og:image" content="https://img.youtube.com/vi/FB1N53Gni2c/maxresdefault.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2a0618">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@500;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: one centred column; names, then the player, then event tabs and venue */
+:root{
+  --wine:#2a0618; --wine-2:#4a0c27; --ink:#12020a;
+  --gold:#f2cf72; --gold-deep:#c8932f; --cream:#fff4dc; --muted:#d9bfa8;
+  --live:#e41b23;
+  --script:"Great Vibes",cursive;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Montserrat",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ink)}
+body{
+  min-height:100vh;color:var(--cream);font-family:var(--sans);
+  background:radial-gradient(ellipse at 50% 0%,var(--wine-2) 0%,var(--wine) 45%,var(--ink) 100%) fixed;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:max(24px,env(safe-area-inset-top,0px)) 40px;
+}
+.wrap{max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+header{text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px}
+.eyebrow{font:600 12px var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+h1{
+  font:400 clamp(54px,11vw,104px)/1.05 var(--script);
+  background:linear-gradient(180deg,#fff4c9,var(--gold) 45%,var(--gold-deep) 75%,#f7dd8f);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  padding:0 .15em;text-wrap:balance;
+}
+h1 .amp{font-size:.75em;margin:0 .12em}
+.sub{font:500 clamp(17px,2.6vw,21px) var(--serif);color:var(--muted);letter-spacing:.04em}
+
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tab{
+  appearance:none;border:1px solid rgba(242,207,114,.35);background:rgba(255,255,255,.04);
+  color:var(--cream);border-radius:12px;padding:14px 12px;cursor:pointer;text-align:left;
+  display:flex;flex-direction:column;gap:4px;font-family:var(--sans);transition:background .2s,border-color .2s;
+  min-width:0;
+}
+.tab:hover{background:rgba(242,207,114,.08)}
+.tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.tab[aria-selected="true"]{background:linear-gradient(135deg,rgba(242,207,114,.22),rgba(200,147,47,.12));border-color:var(--gold)}
+.tab-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.tab-name{font:700 clamp(20px,3.4vw,26px) var(--serif);color:var(--gold)}
+.tab-when{font-size:13px;color:var(--muted)}
+
+.badge{font:700 10.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.badge.live{background:var(--live);color:#fff}
+.badge.live::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite}
+.badge.soon{background:rgba(242,207,114,.16);color:var(--gold)}
+.badge.done{background:rgba(255,255,255,.1);color:var(--muted)}
+@keyframes pulse{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.badge.live::before{animation:none}}
+
+.stage{border-radius:14px;overflow:hidden;border:1px solid rgba(242,207,114,.45);box-shadow:0 20px 60px rgba(0,0,0,.55);background:#000}
+.player{position:relative;width:100%;max-width:100%;aspect-ratio:16/9}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;padding:12px 16px;background:var(--wine)}
+.status{font:600 14px var(--sans);display:flex;align-items:center;gap:10px;min-width:0}
+.count{font-variant-numeric:tabular-nums;color:var(--gold)}
+.yt{font:600 13px var(--sans);color:var(--ink);background:linear-gradient(90deg,#f7dd8f,var(--gold-deep));padding:9px 16px;border-radius:999px;text-decoration:none;white-space:nowrap}
+.yt:focus-visible{outline:2px solid var(--cream);outline-offset:2px}
+
+.venue{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-top:1px solid rgba(242,207,114,.25);border-bottom:1px solid rgba(242,207,114,.25)}
+.venue h2{font:700 22px var(--serif);color:var(--gold)}
+.venue p{font-size:14px;color:var(--muted);margin-top:2px}
+.links{display:flex;gap:10px;flex-wrap:wrap}
+.link{font:600 13px var(--sans);color:var(--gold);text-decoration:none;border:1px solid rgba(242,207,114,.5);padding:8px 14px;border-radius:999px}
+.link:hover{background:rgba(242,207,114,.1)}
+.link:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.note{text-align:center;font:500 18px var(--serif);color:var(--muted);text-wrap:balance}
+.note b{color:var(--cream);font-weight:700}
+footer{text-align:center;font-size:12px;color:rgba(217,191,168,.6);letter-spacing:.06em}
+@media (max-width:480px){.tab{padding:12px 10px}.tab-when{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Live from Chennai</div>
+    <h1>Mahati<span class="amp">&amp;</span>Sankar</h1>
+    <div class="sub">Join us online and bless the couple</div>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Choose event">
+    <button class="tab" role="tab" id="tab-reception" data-ev="reception" aria-selected="false">
+      <span class="tab-top"><span class="tab-name">Reception</span><span class="badge soon" id="b-reception">Upcoming</span></span>
+      <span class="tab-when">Sat, 24 Oct · 7:00 PM onwards</span>
+    </button>
+    <button class="tab" role="tab" id="tab-muhurtham" data-ev="muhurtham" aria-selected="false">
+      <span class="tab-top"><span class="tab-name">Muhurtham</span><span class="badge soon" id="b-muhurtham">Upcoming</span></span>
+      <span class="tab-when">Sun, 25 Oct · 9:00 – 10:30 AM</span>
+    </button>
+  </div>
+
+  <section class="stage" aria-live="polite">
+    <div class="player"><iframe id="yt" title="Live stream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    <div class="bar">
+      <div class="status" id="status">Loading…</div>
+    </div>
+  </section>
+
+  <p class="note">Tap play to watch here. The player switches to the <b>Muhurtham</b> automatically on Sunday morning.</p>
+
+  <div class="venue">
+    <div>
+      <h2>Sree Varaaham Hall</h2>
+      <p>Jawaharlal Nehru Road, Koyambedu, Chennai – 107</p>
+    </div>
+    <div class="links">
+      <a class="link" href="https://www.google.com/maps/search/?api=1&query=Sree+Varaaham+Hall+Koyambedu+Chennai" target="_blank" rel="noopener">Directions</a>
+      <a class="link" href="https://www.jobosskystudios.online/mswedding">Invitation</a>
+    </div>
+  </div>
+
+  <footer>Live streaming by Jobossky Studios · All times IST</footer>
+</div>
+
+<script>
+// Times in IST (UTC+05:30)
+const EV = {
+  reception: { id:"OSAJ0yFWwH8", name:"Reception",
+    start:new Date("2026-10-24T19:00:00+05:30"), end:new Date("2026-10-24T23:59:00+05:30") },
+  muhurtham: { id:"FB1N53Gni2c", name:"Muhurtham",
+    start:new Date("2026-10-25T09:00:00+05:30"), end:new Date("2026-10-25T10:45:00+05:30") }
+};
+// After this moment the page opens on the Muhurtham by default
+const SWITCH_AT = new Date("2026-10-25T05:00:00+05:30");
+
+const $ = id => document.getElementById(id);
+let current = null, manual = false;
+
+function pickDefault(){
+  const h = (location.hash||"").replace("#","");
+  if (EV[h]) { manual = true; return h; }
+  return Date.now() >= SWITCH_AT ? "muhurtham" : "reception";
+}
+function stateOf(ev, now=Date.now()){
+  if (now < ev.start) return "soon";
+  if (now <= ev.end) return "live";
+  return "done";
+}
+function fmt(ms){
+  const s=Math.max(0,Math.floor(ms/1000)), d=Math.floor(s/86400), h=Math.floor(s%86400/3600),
+        m=Math.floor(s%3600/60), x=s%60, p=n=>String(n).padStart(2,"0");
+  return (d?d+"d ":"")+p(h)+"h "+p(m)+"m "+p(x)+"s";
+}
+function show(key, userClick){
+  if (userClick) manual = true;
+  if (current === key) return;
+  current = key;
+  const ev = EV[key];
+  $("yt").src = "https://www.youtube.com/embed/"+ev.id+"?rel=0&modestbranding=1&playsinline=1";
+  $("yt").title = ev.name+" live stream";
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected", t.dataset.ev===key));
+  try { history.replaceState(null,"","#"+key); } catch(e){}
+  tick();
+}
+function tick(){
+  const now = Date.now();
+  for (const k in EV){
+    const s = stateOf(EV[k],now), b=$("b-"+k);
+    b.className = "badge "+s;
+    b.textContent = s==="live"?"Live now":s==="soon"?"Upcoming":"Watch again";
+  }
+  if (!manual && now >= SWITCH_AT && current !== "muhurtham") show("muhurtham");
+  const ev = EV[current], s = stateOf(ev,now);
+  $("status").innerHTML =
+    s==="soon" ? ev.name+" starts in <span class='count'>"+fmt(ev.start-now)+"</span>"
+  : s==="live" ? "<span class='badge live'>Live</span> "+ev.name+" is streaming now"
+  : ev.name+" has ended. Replay plays above.";
+}
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>show(t.dataset.ev,true)));
+show(pickDefault());
+setInterval(tick,1000);
+</script>
+</body>
+</html>
